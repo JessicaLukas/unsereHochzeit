@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unsere Hochzeit</title>
+  <link rel="stylesheet" href="style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+<script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Linkes feststehendes Bild -->
+    <div class="left">
+    <div class="image" style="background-image: url('bilder/Hochzeit_Armband.jpg');"></div>
+    </div>
+
+    <!-- Rechter Scrollbereich -->
+    <div class="right">
+      <section id="start">
+        <div class="textblock">
+        <h1 class="namen">Jessica & Lukas</h1>
+        <p></p>
+        <br>
+        <div class="trenner">
+         <span>♥</span>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p></p>
+        <p class="spruch">Und dann standst du da.</p>
+        <p class="spruch">Wie ein Sonnenstrahl - still, warm, klar.</p>
+        <p class="spruch">Und plötzlich war alles ganz einfach.</p>
+        <p></p>
+        <br>
+        <br>
+        <br>
+        <p></p>
+        <section id="datum">
+        <p>20. September 2025</p>
+        <p></p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="trenner">
+         <span>♥</span>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p></p>
+      <section id="ort">
+        <p>Kirche Sankt Nikolaus, 6884 Damüls, Österreich</p>
+        <div id="map"></div>
+      </section>
+        <p></p>
+        <br>
+        <br>
+        <p></p>
+         <div class="countdown" id="countdown"></div>
+        </div>
+      </section>
+      <p></p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="trenner">
+         <span>♥</span>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p></p>
+      <section id="ablauf">
+        <p>Tagesablauf</p>
+        <br>
+    <section id="ablauf-header">
+    <p>14:00 Uhr Einfinden & Trauung</p>
+        <ul id="ablauf-list">
+        <p>Wir bitten euch, pünktlich an der Kirche zu erscheinen und eure Plätze einzunehmen.</p>
+        <p>Die Trauung startet pünktlich um XXX</p>
+        <p>Bitte denkt daran eine leise Beschäftigung für eure Kleinen mitzunehmen.</p>
+        <br>
+        <br>
+    <section id="ablauf-header">
+    <p>15:30 Uhr Agape</p>
+        <ul id="ablauf-list">
+        <p>Es wird gegessen, getanzt und gelacht.</p>
+        <p>Wir freuen uns darauf, diesen besonderen Tag mit euch zu feiern.</p>
+        <br>
+        <br>
+    <section id="ablauf-header">
+    <p>18:00 Uhr Ausklang</p>
+        <ul id="ablauf-list">
+        <p>Den Abend lassen wir im allerengsten Kreis ausklingen. </p>
+        <p>Schön, dass ihr da wart.</p>
+        </ul>
+      </section>
+      <p></p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="trenner">
+         <span>♥</span>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p></p>
+        <section id="Rückmeldung">
+        <p>Rückmeldung</p>
+        <form id="rsvp-form" action="https://formsubmit.co/jessica.gasser.jg@gmail.com" method="POST">
+  <input type="hidden" name="_captcha" value="false">
+
+  <input type="text" name="name" placeholder="Name" required />
+  <select name="teilnahme" required>
+    <option value="ja">Hiermit sage ich zu</option>
+    <option value="nein">Ich kann leider nicht kommen</option>
+  </select>
+  <input type="text" name="musik" placeholder="Musikwunsch" />
+  <textarea name="nachricht" placeholder="Nachricht"></textarea>
+
+  <p>Persönliche Daten</p>
+  <input type="text" name="adresse" placeholder="Straße und Hausnummer" required />
+  <input type="text" name="plzort" placeholder="PLZ und Ort" required />
+
+  <button type="submit">Absenden</button>
+</form>
+<!-- Platz für Dankesnachricht -->
+<div id="rsvp-danke" style="display:none; margin-top: 1em; font-size: 1.5em; color: #4e6b4e;">
+  Danke für deine Rückmeldung!
+</div>
+    <p></p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="trenner">
+         <span>♥</span>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p></p>
+      <section id="wuensche">
+        <p>Wünsche</p>
+        <ul id="wuensche-list"ul>
+            <p>Kommt mit guter Laune und Zeit, dann macht ihr uns die größte Freud.</p>
+            <p>Wollt ihr uns trotzdem etwas schenken, könnt ihr an unser Sparschwein denken!</p>
+    </section>
+       <p></p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="trenner">
+         <span>♥</span>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p></p>
+      <section id="organisation">
+        <p>Organisation & Kontakt</p>
+        <ul id="organisation-list"ul>
+            <p>Trauzeuge: Peter Hofmann – max@example.com</p>
+            <p>Trauzeuge: XXX – lisa@example.com</p>
+            <p>Ihr habt Ideen, plant eine Überraschung, möchtet euch einbringen? Bitte sprecht euch mit unseren Trauzeugen ab.</p>
+            <br>
+            <p>Braut: Jessica Gasser</p>
+            <p>Bräutigam: Lukas Riezler</p>
+        <br>
+        <br>
+        <br>
+        <br>
+    <section id="ablauf-header">
+    <p>allgemeine Information</p>
+        <ul id="ablauf-list">
+        <p>Zur Kirche geht es einige Schritte bergauf.</p>
+        <p>Nach der Trauung, verlassen die Gäste die Kirche und stellen sich im Spallier auf.</p>
+        <p>Dresscode: chic / casual chic</p>
+        <p></p>
+      </section>
+      <p></p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="trenner">
+         <span>♥</span>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+         <section id="copyright">
+        <p>© Jessica Gasser</p>
+        <p></p>
+    </div>
+  </div>
+</body>
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKw9R4zFmdiAoQSnwRP25GTi73vgWydPg&callback=initMap"   
+  async
+  defer
+></script>
+</html>

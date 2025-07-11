@@ -1,0 +1,242 @@
+/* Grundlegendes Layout */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Noto Sans", sans-serif;
+  font-style: "Noto Sans";
+  font-optical-sizing: auto;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Linker Bereich – Bild fixiert */
+.left {
+  width: 50%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.image {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Rechter Scrollbereich */
+.right {
+  margin-left: 50%;
+  padding: 2rem;
+  overflow-y: auto;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Textblöcke */
+.textblock {
+  text-align: center;
+  padding-top: 30vh;
+}
+
+/* Namen */
+.namen {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 4rem;
+  color: #4e6b4e;
+}
+
+/* Spruch */
+.spruch {
+  font-style: italic;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+    color: #4e6b4e;
+}
+
+/* Datum */
+#datum {
+  font-style: normal;
+  font-size: 2rem;
+  margin: 1rem 0;
+  text-align: center;
+  color: #4e6b4e;
+}
+
+/* Ort */
+#ort {
+  font-style: normal;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  text-align: center;
+  color: #4e6b4e;
+}
+
+/* Countdown */
+.countdown {
+  font-size: rem;
+  color: #4e6b4e;
+  margin-top: 1.5rem;
+}
+
+/* Kartenbereich */
+#map {
+  height: 300px;
+  width: 100%;
+  margin-top: 1em;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+}
+
+/* Ablauf Überschrift */
+#ablauf {
+  font-style: normal;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  text-align: center;
+  color: #4e6b4e;
+}
+
+/* Ablauf Unterüberschrift */
+#ablauf-header {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  text-align: center;
+  color: #4e6b4e;
+}
+
+/* Ablauf Liste */
+#ablauf-list {
+  font-style: normal;
+  font-size: 1.0rem;
+  margin: 1rem 0;
+  text-align: center;
+  color: #0c0c0c
+}
+
+/* Rückmeldung */
+#Rückmeldung {
+  font-style: normal;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  text-align: center;
+  color: #4e6b4e;
+}
+
+/* Formular */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  color: #4e6b4e;
+}
+
+input, select, textarea, button {
+  padding: 0.6rem;
+  font-size: 1.0rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: "Noto Sans";
+}
+
+button {
+  background-color: #4e6b4e;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4e6b4e;
+}
+
+#wuensche {
+  font-style: normal;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  text-align: center;
+  color: #4e6b4e;
+}
+
+#wuensche-list {
+  font-style: normal;
+  font-size: 1.0rem;
+  margin: 1rem 0;
+  text-align: center;
+  color: #0c0c0c;
+}
+
+#organisation {
+  font-style: normal;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  text-align: center;
+  color: #4e6b4e;
+}
+
+#organisation-list {
+  font-style: normal;
+  font-size: 1.0rem;
+  margin: 1rem 0;
+  text-align: center;
+  color: #0c0c0c;
+}
+
+#copyright {
+  font-style: normal;
+  font-size: 0.8rem;
+  margin: 1rem 0;
+  text-align: right;
+  color: #4e6b4e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left {
+    position: relative;
+    width: 100%;
+    height: 200px;
+  }
+
+  .right {
+    margin-left: 0;
+    padding: 1rem;
+    height: auto;
+  }
+
+  .textblock {
+    padding-top: 2rem;
+  }
+}
+.trenner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3em 0;
+  position: relative;
+}
+
+.trenner::before,
+.trenner::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+  margin: 0 1em;
+}
+
+.trenner span {
+  font-size: 1.5em;
+  color: #4e6b4e; /* weinrot/rosé */
+}
