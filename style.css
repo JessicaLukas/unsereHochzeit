@@ -3,7 +3,7 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans", Arial, sans-serif;
   font-style: "Noto Sans";
   font-optical-sizing: auto;
   overflow-x: hidden;
@@ -11,6 +11,7 @@ body, html {
 
 .container {
   display: flex;
+  display: -webkit-flex;
   height: 100vh;
 }
 
@@ -57,7 +58,8 @@ body, html {
   font-style: italic;
   font-size: 1.5rem;
   margin: 1rem 0;
-    color: #4e6b4e;
+  text-align: center;
+  color: #4e6b4e;
 }
 
 /* Datum */
@@ -80,7 +82,7 @@ body, html {
 
 /* Countdown */
 .countdown {
-  font-size: rem;
+  font-size: 2rem;
   color: #4e6b4e;
   margin-top: 1.5rem;
 }
@@ -94,8 +96,7 @@ body, html {
   border: 1px solid #ccc;
 }
 
-/* Ablauf Überschrift */
-#ablauf {
+#Ablauf {
   font-style: normal;
   font-size: 1.5rem;
   margin: 1rem 0;
@@ -103,22 +104,12 @@ body, html {
   color: #4e6b4e;
 }
 
-/* Ablauf Unterüberschrift */
-#ablauf-header {
-  font-style: italic;
-  font-size: 1.2rem;
-  margin: 1rem 0;
+#Zeit {
+  font-style: normal;
+  font-size: 1.25rem;
+  margin: rem 0;
   text-align: center;
   color: #4e6b4e;
-}
-
-/* Ablauf Liste */
-#ablauf-list {
-  font-style: normal;
-  font-size: 1.0rem;
-  margin: 1rem 0;
-  text-align: center;
-  color: #0c0c0c
 }
 
 /* Rückmeldung */
@@ -144,7 +135,7 @@ input, select, textarea, button {
   font-size: 1.0rem;
   border-radius: 6px;
   border: 1px solid #ccc;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
 }
 
 button {
@@ -205,38 +196,42 @@ button:hover {
   }
 
   .left {
-    position: relative;
+    position: static;
     width: 100%;
     height: 200px;
   }
 
   .right {
     margin-left: 0;
-    padding: 1rem;
+    padding: 1.5rem;
     height: auto;
   }
 
   .textblock {
-    padding-top: 2rem;
+    padding-top: 1.5rem;
   }
 }
 .trenner {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 3em 0;
+  margin: 2em 0;
   position: relative;
+  font-size: 1.5rem; /* Einheitlich für alle Herzen */
 }
 
 .trenner::before,
 .trenner::after {
   content: "";
   flex: 1;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #4e6b4e;
   margin: 0 1em;
 }
 
 .trenner span {
-  font-size: 1.5em;
-  color: #4e6b4e; /* weinrot/rosé */
+  font-family: "Lobster", cursive;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #4e6b4e;
+  display: inline-block;
 }
