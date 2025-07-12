@@ -30,29 +30,12 @@ setInterval(updateCountdown, 1000);
 updateCountdown();
 
 
-// === FORMULAR: NUR ZUM TESTEN – KONSOLE ===
-
-const form = document.getElementById("rsvp-form");
-
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const formData = new FormData(form);
-  const data = Object.fromEntries(formData.entries());
-
-  console.log("Formulardaten:", data);
-
-  alert("Vielen Dank für deine Rückmeldung!");
-
-  form.reset();
-});
-// Formular-Ersatz durch Danke-Nachricht
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("rsvp-form");
-  const dankeDiv = document.getElementById("rsvp-danke");
+<script>
+  const form = document.getElementById("form");
+  const dankText = document.getElementById("rsvp-danke");
 
   form.addEventListener("submit", function (e) {
-    e.preventDefault();
+    e.preventDefault(); // verhindert automatische Weiterleitung
 
     const formData = new FormData(form);
 
@@ -62,18 +45,21 @@ document.addEventListener("DOMContentLoaded", function () {
       headers: {
         'Accept': 'application/json'
       }
-    }).then(response => {
+    })
+    .then(response => {
       if (response.ok) {
         form.style.display = "none";
-        dankeDiv.style.display = "block";
+        dankText.style.display = "block";
       } else {
-        alert("Fehler beim Senden. Bitte versuch es erneut.");
+        alert("Fehler beim Senden des Formulars. Bitte versuche es erneut.");
       }
-    }).catch(error => {
-      alert("Es gab ein Problem beim Senden.");
+    })
+    .catch(error => {
+      console.error("Formularfehler:", error);
+      alert("Ein unerwarteter Fehler ist aufgetreten.");
     });
   });
-});
+</script>
 function initMap() {
   const ort = { lat: 47.28056561777685, lng: 9.890711652770793 }; // Beispiel: Bad Tölz
   const map = new google.maps.Map(document.getElementById("map"), {
