@@ -29,21 +29,15 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
-
-<script>
   const form = document.getElementById("form");
   const danke = document.getElementById("rsvp-danke");
   const iframe = document.getElementById("dummyframe");
 
-  iframe.addEventListener("load", () => {
-    // Nur anzeigen, wenn Formular auch wirklich gesendet wurde
-    // Prüfen, ob das iframe geladen wurde, NICHT beim ersten Seitenladen
-    if (form.style.display !== "none") {
-      form.style.display = "none";
-      danke.style.display = "block";
-    }
-  });
-</script>
+  iframe.onload = function () {
+    // Zeige Danke-Nachricht nach erfolgreicher Absendung
+    form.style.display = "none";
+    danke.style.display = "block";
+  };
 
 function initMap() {
   const ort = { lat: 47.28056561777685, lng: 9.890711652770793 }; // Beispiel: Bad Tölz
@@ -57,4 +51,4 @@ function initMap() {
     title: "Ort der Feier",
   });
 }
-
+defer
