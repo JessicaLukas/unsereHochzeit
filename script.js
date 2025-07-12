@@ -29,15 +29,36 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
-  const form = document.getElementById("form");
-  const danke = document.getElementById("rsvp-danke");
-  const iframe = document.getElementById("dummyframe");
+const form = document.getElementById("form");
+const danke = document.getElementById("rsvp-danke");
 
-  iframe.onload = function () {
-    // Zeige Danke-Nachricht nach erfolgreicher Absendung
-    form.style.display = "none";
-    danke.style.display = "block";
-  };
+form.addEventListener("submit", function (e) {
+  e.preventDefault(); // Seite nicht neu laden
+
+  const data = new FormData(form);
+
+  fetch("https://formsubmit.co/jessica.gasser.jg@gmail.com", {
+    method: "POST",
+    body: data,
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+    .then(response => {
+      if (response.ok) {
+        form.style.display = "none";
+        danke.style.display = "block";
+        form.reset();
+      } else {
+        alert("Leider konnte das Formular nicht gesendet werden.");
+      }
+    })
+    .catch(error => {
+      console.error("Fehler beim Senden:", error);
+      alert("Fehler beim Senden des Formulars.");
+    });
+});
+
 
 function initMap() {
   const ort = { lat: 47.28056561777685, lng: 9.890711652770793 }; // Beispiel: Bad Tölz
