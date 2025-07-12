@@ -31,21 +31,20 @@ updateCountdown();
 
 
 <script>
-
   const form = document.getElementById("form");
   const danke = document.getElementById("rsvp-danke");
+  const iframe = document.getElementById("dummyframe");
 
-  // Zugriff auf das versteckte iframe
-  const iframe = document.querySelector("iframe[name='dummyframe']");
-
-  // Wenn das Formular erfolgreich geladen wurde (Antwort kommt im iframe an)
   iframe.addEventListener("load", () => {
-    // Formular ausblenden
-    form.style.display = "none";
-    // Danketext anzeigen
-    danke.style.display = "block";
+    // Nur anzeigen, wenn Formular auch wirklich gesendet wurde
+    // Prüfen, ob das iframe geladen wurde, NICHT beim ersten Seitenladen
+    if (form.style.display !== "none") {
+      form.style.display = "none";
+      danke.style.display = "block";
+    }
   });
 </script>
+
 function initMap() {
   const ort = { lat: 47.28056561777685, lng: 9.890711652770793 }; // Beispiel: Bad Tölz
   const map = new google.maps.Map(document.getElementById("map"), {
