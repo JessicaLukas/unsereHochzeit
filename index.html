@@ -116,40 +116,40 @@
         <p></p>
     <section id="Rückmeldung">
   <p>Rückmeldung</p></section>
-    <section id="Rückmeldung-list">
-        <p>Bitte gebt uns bis zum xDatumx Bescheid.</p></section>
-        <br>
-        <br>
-  <!-- Formular -->
-  <form id="form" action="https://formsubmit.co/jessica.gasser.jg@gmail.com" method="POST" target="dummyframe">
-    <!-- Unsichtbares Ziel-iframe -->
-    <iframe name="dummyframe" style="display:none;"></iframe>
-
-    <!-- Konfiguration -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="about:blank">
-
-    <!-- Eingabefelder -->
-    <input type="text" name="name" placeholder="Name" required />
-    <select name="teilnahme" required>
-      <option value="ja">Hiermit sage ich zu</option>
-      <option value="nein">Ich kann leider nicht kommen</option>
-    </select>
-    <input type="text" name="musik" placeholder="Musikwunsch" />
-    <textarea name="anmerkung" placeholder="Nachricht"></textarea>
-
-    <p>Persönliche Daten</p>
-    <input type="text" name="adresse" placeholder="Straße und Hausnummer" required />
-    <input type="text" name="plzort" placeholder="PLZ und Ort" required />
-
-    <button type="submit">Absenden</button>
-  </form>
-
-  <!-- Danketext -->
-  <div id="rsvp-danke" style="display: none; margin-top: 1em; font-size: 1.5em; color: #4e6b4e;">
-    Danke für deine Rückmeldung!
-  </div>
+   <section id="Rückmeldung-list">
+  <p>Bitte gebt uns bis zum xDatumx Bescheid.</p>
 </section>
+
+<!-- Formular -->
+<form id="form" action="https://formsubmit.co/jessica.gasser.jg@gmail.com" method="POST" target="dummyframe">
+  <!-- Unsichtbares Ziel-iframe -->
+  <iframe name="dummyframe" style="display:none;" id="dummyframe"></iframe>
+
+  <!-- Konfiguration -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="about:blank">
+
+  <!-- Eingabefelder -->
+  <input type="text" name="name" placeholder="Name" required />
+  <select name="teilnahme" required>
+    <option value="ja">Hiermit sage ich zu</option>
+    <option value="nein">Ich kann leider nicht kommen</option>
+  </select>
+  <input type="text" name="musik" placeholder="Musikwunsch" />
+  <textarea name="anmerkung" placeholder="Nachricht"></textarea>
+
+  <p>Persönliche Daten</p>
+  <input type="text" name="adresse" placeholder="Straße und Hausnummer" required />
+  <input type="text" name="plzort" placeholder="PLZ und Ort" required />
+
+  <button type="submit">Absenden</button>
+</form>
+
+<!-- Danketext -->
+<div id="rsvp-danke" style="display: none; margin-top: 1em; font-size: 1.5em; color: #4e6b4e;">
+  Danke für deine Rückmeldung!
+</div>
+
         <br>
         <br>
         <br>
