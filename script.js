@@ -31,23 +31,19 @@ updateCountdown();
 
 
 <script>
+
   const form = document.getElementById("form");
   const danke = document.getElementById("rsvp-danke");
 
-  form.addEventListener("submit", function (event) {
-    // NICHT verhindern – das Formular wird in ein iframe geschickt
-    // aber wir zeigen selbstständig den Danketext an
-    setTimeout(() => {
-      form.style.display = "none";
-      danke.style.display = "block";
-    }, 300); // kurze Verzögerung für bessere UX
+  // Zugriff auf das versteckte iframe
+  const iframe = document.querySelector("iframe[name='dummyframe']");
 
-    // Optional: Formular nach 5 Sekunden zurücksetzen und wieder anzeigen
-    setTimeout(() => {
-      form.reset();
-      form.style.display = "block";
-      danke.style.display = "none";
-    }, 5000); // nach 5 Sekunden zurücksetzen
+  // Wenn das Formular erfolgreich geladen wurde (Antwort kommt im iframe an)
+  iframe.addEventListener("load", () => {
+    // Formular ausblenden
+    form.style.display = "none";
+    // Danketext anzeigen
+    danke.style.display = "block";
   });
 </script>
 function initMap() {
