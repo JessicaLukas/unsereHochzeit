@@ -32,32 +32,22 @@ updateCountdown();
 
 <script>
   const form = document.getElementById("form");
-  const dankText = document.getElementById("rsvp-danke");
+  const danke = document.getElementById("rsvp-danke");
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault(); // verhindert automatische Weiterleitung
+  form.addEventListener("submit", function (event) {
+    // NICHT verhindern – das Formular wird in ein iframe geschickt
+    // aber wir zeigen selbstständig den Danketext an
+    setTimeout(() => {
+      form.style.display = "none";
+      danke.style.display = "block";
+    }, 300); // kurze Verzögerung für bessere UX
 
-    const formData = new FormData(form);
-
-    fetch(form.action, {
-      method: "POST",
-      body: formData,
-      headers: {
-        'Accept': 'application/json'
-      }
-    })
-    .then(response => {
-      if (response.ok) {
-        form.style.display = "none";
-        dankText.style.display = "block";
-      } else {
-        alert("Fehler beim Senden des Formulars. Bitte versuche es erneut.");
-      }
-    })
-    .catch(error => {
-      console.error("Formularfehler:", error);
-      alert("Ein unerwarteter Fehler ist aufgetreten.");
-    });
+    // Optional: Formular nach 5 Sekunden zurücksetzen und wieder anzeigen
+    setTimeout(() => {
+      form.reset();
+      form.style.display = "block";
+      danke.style.display = "none";
+    }, 5000); // nach 5 Sekunden zurücksetzen
   });
 </script>
 function initMap() {
