@@ -121,6 +121,14 @@ body, html {
   color: #4e6b4e;
 }
 
+#Rückmeldung-list {
+  font-style: normal;
+  font-size: 1.0rem;
+  margin: 1rem 0;
+  text-align: center;
+  color: #0c0c0c;
+}
+
 /* Formular */
 form {
   display: flex;
