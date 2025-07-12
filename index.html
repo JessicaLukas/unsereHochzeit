@@ -120,14 +120,15 @@
   <p>Bitte gebt uns bis zum xDatumx Bescheid.</p>
 </section>
 
-<!-- Formular -->
-<form id="form" action="https://formsubmit.co/jessica.gasser.jg@gmail.com" method="POST" target="dummyframe">
-  <!-- Unsichtbares Ziel-iframe -->
-  <iframe name="dummyframe" style="display:none;" id="dummyframe"></iframe>
+<!-- Danke-Nachricht, initial versteckt -->
+<div id="Rückmeldung" style="display:none; margin-top:1em; font-size:1.5em; color:#4e6b4e; text-align:center;">
+  Danke für deine Rückmeldung!
+</div>
 
-  <!-- Konfiguration -->
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="about:blank">
+<!-- Unsichtbares Ziel-iframe -->
+<iframe name="dummyframe" id="dummyframe" style="display:none;"></iframe>
+
+<form id="form" action="https://formsubmit.co/jessica.gasser.jg@gmail.com" method="POST" target="dummyframe">
 
   <!-- Eingabefelder -->
   <input type="text" name="name" placeholder="Name" required />
@@ -135,20 +136,13 @@
     <option value="ja">Hiermit sage ich zu</option>
     <option value="nein">Ich kann leider nicht kommen</option>
   </select>
-  <input type="text" name="musik" placeholder="Musikwunsch" />
-  <textarea name="anmerkung" placeholder="Nachricht"></textarea>
-
+  <input type="text" name="musik" placeholder="Musikwunsch (optional)" />
+  <textarea name="anmerkung" placeholder="Nachricht (optional)"></textarea>
   <p>Persönliche Daten</p>
   <input type="text" name="adresse" placeholder="Straße und Hausnummer" required />
   <input type="text" name="plzort" placeholder="PLZ und Ort" required />
-
   <button type="submit">Absenden</button>
 </form>
-
-<!-- Danketext -->
-<div id="rsvp-danke" style="display: none; margin-top: 1em; font-size: 1.5em; color: #4e6b4e;">
-  Danke für deine Rückmeldung!
-</div>
 
         <br>
         <br>
